@@ -122,8 +122,8 @@ VITE_API_BASE_URL=
 
 ## 🛡️ Security.
 
-- JWT cho xac thuc API
-- CORS bao ve frontend-backend
+- JWT for API Authentication.
+- CORS to protect frontend-backend communication.
 
 ---
 
