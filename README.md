@@ -1,8 +1,8 @@
 # 🤖 HiPT Chatbot
 
-Mot nen tang chatbot manh me voi API rieng va giao dien nguoi dung hien dai. Ho tro tro chuyen thong minh, de dang mo rong, phu hop cho website ho tro khach hang, tu van, hoac tich hop AI nang cao.
+A powerful chatbot platform with a dedicated API and modern user interface. It supports intelligent conversations, is easy to expand, and is suitable for customer support, consultation, or integration with advanced AI on websites.
 
-## 📂 Cau truc du an
+## 📂 The project structure.
 
 ```
 chatbot-project/
@@ -14,39 +14,39 @@ chatbot-project/
 
 ---
 
-## 🚀 Tính năng chính
+## 🚀 Main features.
 
-- 🛹️ Chatbot hỗ trợ giải đáp thắc mắc về học vụ cho sinh viên khoa Công nghệ Thông tin
-- 🔐 Đăng nhập/Đăng ký, xác thực người dùng
-- 🌐 Cho phép chat mà không đăng nhập
-- 📡 Tạo nhiều đoạn hội thoại
-- 📁 Chỉnh sửa và xoá đoạn hội thoại
+- 🛹️ The chatbot supports answering academic-related questions for students in the Faculty of Information Technology.
+- 🔐 Login/Registration, User Authentication.
+- 🌐 Allow chatting without login.
+- 📡 Create multiple conversation threads.
+- 📁 Edit and delete conversation threads.
 
 ---
 
-## ⚙️ Công nghệ sử dụng
+## ⚙️ Technologies used.
 
 ### 📌 **Backend (API)**
 
-- **Ngôn ngữ:** Node.js
+- **Language.:** Node.js
 - **Framework:** Express.js
 - **Authentication:** JWT
-- **Cơ sở dữ liệu:** MongoDB
+- **Database.:** MongoDB
 - **Real-time:** WebSocket / Server-Sent Events (SSE)
-- **Triển khai:** Local + Ngrok
+- **Deployment.:** Local + Ngrok
 
 ### 📌 **Frontend (UI)**
 
 - **Framework:** Vite + React
-- **Giao tiếp API:** Fetch
-- **Giao diện:** Tailwind CSS
+- **API Communication.:** Fetch
+- **User Interface.:** Tailwind CSS
 - **Realtime:** WebSocket client / EventSource (SSE)
 
 ---
 
-## 💻 Hướng dẫn cài đặt
+## 💻 Installation Guide.
 
-### 1️⃣ Cài đặt Backend (API)
+### 1️⃣ Backend Installation. (API)
 
 ```bash
 cd vl_api
@@ -54,11 +54,11 @@ npm install
 npm run dev
 ```
 
-- **URL mặc định của API:** `http://localhost:8000`
+- **Default API URL:** `http://localhost:8000`
 
 ---
 
-### 2️⃣ Cài đặt Frontend (UI)
+### 2️⃣ Frontend Installation. (UI)
 
 ```bash
 cd e-chatbot
@@ -66,11 +66,11 @@ npm install
 npm run dev
 ```
 
-- **URL mặc định của API:** `http://localhost:5173`
+- **Default API URL:** `http://localhost:5173`
 
 ---
 
-### 3️⃣ Biến môi trường `.env`
+### 3️⃣ Environment Variables. `.env`
 
 #### Backend (`vl_api/.env`)
 
@@ -120,14 +120,14 @@ VITE_API_BASE_URL=
 
 ---
 
-## 🛡️ Bao mat
+## 🛡️ Security.
 
 - JWT cho xac thuc API
 - CORS bao ve frontend-backend
 
 ---
 
-## 📬 Lien he
+## 📬 Contact.
 
 - Email:(mailto\:huybang729@gmail.com)
 - Github:(https://github.com/huybang729/HPiT-MentorBot.git)
