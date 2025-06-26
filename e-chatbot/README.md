@@ -1,54 +1,137 @@
-# React + TypeScript + Vite
+# 🤖 HiPT Chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mot nen tang chatbot manh me voi API rieng va giao dien nguoi dung hien dai. Ho tro tro chuyen thong minh, de dang mo rong, phu hop cho website ho tro khach hang, tu van, hoac tich hop AI nang cao.
 
-Currently, two official plugins are available:
+## 📂 Cau truc du an
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+chatbot-project/
+🔗 vl_api/       # API backend (Node.js)
+🔗 e-chatbot/       # UI frontend (Vite)
+🔗 README.md
+🔗 LICENSE
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Tính năng chính
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- 🛹️ Chatbot hỗ trợ giải đáp thắc mắc về học vụ cho sinh viên khoa Công nghệ Thông tin
+- 🔐 Đăng nhập/Đăng ký, xác thực người dùng
+- 🌐 Cho phép chat mà không đăng nhập
+- 📡 Tạo nhiều đoạn hội thoại
+- 📁 Chỉnh sửa và xoá đoạn hội thoại
+
+---
+
+## ⚙️ Công nghệ sử dụng
+
+### 📌 **Backend (API)**
+
+- **Ngôn ngữ:** Node.js
+- **Framework:** Express.js
+- **Authentication:** JWT
+- **Cơ sở dữ liệu:** MongoDB
+- **Real-time:** WebSocket / Server-Sent Events (SSE)
+- **Triển khai:** Local + Ngrok
+
+### 📌 **Frontend (UI)**
+
+- **Framework:** Vite + React
+- **Giao tiếp API:** Fetch
+- **Giao diện:** Tailwind CSS
+- **Realtime:** WebSocket client / EventSource (SSE)
+
+---
+
+## 💻 Hướng dẫn cài đặt
+
+### 1️⃣ Cài đặt Backend (API)
+
+```bash
+cd vl_api
+npm install
+npm run dev
 ```
+
+- **URL mặc định của API:** `http://localhost:8000`
+
+---
+
+### 2️⃣ Cài đặt Frontend (UI)
+
+```bash
+cd e-chatbot
+npm install
+npm run dev
+```
+
+- **URL mặc định của API:** `http://localhost:5173`
+
+---
+
+### 3️⃣ Biến môi trường `.env`
+
+#### Backend (`vl_api/.env`)
+
+```
+DATABASE_URL=
+SECRET_KEY=
+```
+
+#### Frontend (`e-chatbot/.env`)
+
+```
+VITE_API_BASE_URL=
+```
+
+---
+
+### 🗨️ Conversation APIs
+
+| Method  | Endpoint                            | Description                                      |
+|---------|-------------------------------------|-------------------------------------------------|
+| `POST`  | `/v1/conversations/`                | Create a new conversation                        |
+| `GET`   | `/v1/conversations/`                | Retrieve a list of conversations                 |
+| `GET`   | `/v1/conversations/:id/listen`      | Listen for events (when the bot replies)         |
+| `PUT`   | `/v1/conversations/:id/rename`      | Rename a conversation                            |
+| `DELETE`| `/v1/conversations/:id`             | Delete a conversation                            |
+
+---
+
+### ✉️ Message APIs
+
+| Method  | Endpoint                  | Description                           |
+|---------|---------------------------|---------------------------------------|
+| `POST`  | `/v1/messages/`           | Create a new message                  |
+| `GET`   | `/v1/messages/:id`        | Retrieve messages in a conversation   |
+| `DELETE`| `/v1/messages/`           | Delete a message                      |
+
+---
+
+### 👤 User APIs
+
+| Method  | Endpoint                | Description                          |
+|---------|-------------------------|--------------------------------------|
+| `POST`  | `/v1/users/register`    | Register a new user                  |
+| `POST`  | `/v1/users/login`       | Login with an existing account       |
+| `POST`  | `/v1/users/guest`       | Login as guest (without an account)  |
+
+
+---
+
+## 🛡️ Bao mat
+
+- JWT cho xac thuc API
+- CORS bao ve frontend-backend
+
+---
+
+## 📬 Lien he
+
+- Email:(mailto\:huybang729@gmail.com)
+- Github:(https://github.com/huybang729/HPiT-MentorBot.git)
+
+---
+
+
